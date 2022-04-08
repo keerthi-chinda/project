@@ -4,11 +4,10 @@ spring:
   cloud:
     gateway:
       routes:
-      -uri: http://localhost:8033/
-       predicates:
-       -path=/std/**
-      -uri: http://localhost:8034/
-       predicates:
-       -path=/stds/**
-      
-      
+      - uri: http://localhost:8033/
+        predicates:
+        - Path=/std/**
+      - uri: http://localhost:8034/
+        predicates:
+        - Path=/stds/**
+
