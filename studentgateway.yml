@@ -1,0 +1,14 @@
+server:
+  port: 8035
+spring:
+  cloud:
+    gateway:
+      routes:
+      -uri: http://localhost:8033/
+       predicates:
+       -path=/std/**
+      -uri: http://localhost:8034/
+       predicates:
+       -path=/stds/**
+      
+      
